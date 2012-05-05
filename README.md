@@ -1,0 +1,4 @@
+SuperLogin
+==========
+
+Joomla Login Module
