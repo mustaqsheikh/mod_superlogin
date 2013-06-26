@@ -29,7 +29,7 @@ $ -> Spanish language by @NeroCaes2
 $ -> Language fix or change
 
 1.7.0RC
-+ Added option to select Regiistration component -Joomla, JomSocial, Kunena
++ Added option to select Registration component -Joomla, JomSocial, Kunena
 
 1.7.0b2
 # Fixed xml for language files to install correctly
