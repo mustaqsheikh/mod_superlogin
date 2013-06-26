@@ -156,3 +156,64 @@ span.niftydefault span.super-login span.logout span.logout-button-text button {
 	display: block;
 	cursor: pointer;
 }
+
+/* Style "Nitftydefault", button as button */
+
+span.niftydefault span.super-login span.login span.login-button-icon, 
+span.niftydefault span.super-login span.logout span.logout-button-icon {
+	margin-right: 5px;
+	margin-left: -2px;
+	float: left;
+	overflow: hidden;
+}
+
+span.niftydefault span.super-login span.login span.login-button-icon {
+	width: 21px;
+	height: 20px;
+	background: url(styles/niftydefault/images/login_button_bg.png) 0 0 no-repeat;
+}
+
+span.niftydefault span.super-login span.login span.login-button-icon:hover {
+	background: url(styles/niftydefault/images/login_button_bg.png) 0 -20px no-repeat;
+}
+
+span.niftydefault span.super-login span.login span.login-button-icon button {
+	display: block;
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+	height: 20px;
+	border: none;
+	background: none;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+span.niftydefault span.super-login span.logout span.logout-button-icon {
+	width: 21px;
+	height: 20px;
+	background: url(styles/niftydefault/images/logout_button_bg.png) 0 0 no-repeat;
+	float: left;
+}
+
+span.niftydefault span.super-login span.logout span.logout-button-icon:hover {
+	background: url(styles/niftydefault/images/logout_button_bg.png) 0 -20px no-repeat;
+}
+
+span.niftydefault span.super-login span.logout span.logout-button-icon button {
+	display: block;
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+	height: 20px;
+	border: none;
+	background: none;
+	cursor: pointer;
+	overflow: hidden;
+	font-size: 11px;
+	color: #646464;
+	text-transform: lowercase;
+}
+
+span.niftydefault span.super-login span.logout span.logout-button-icon button:hover {
+	color: #000000;
+}
+

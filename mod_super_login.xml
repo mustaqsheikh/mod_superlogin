@@ -7,8 +7,8 @@
 	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
 	<authorEmail>no-reply@herdboy.com</authorEmail>
 	<authorUrl>http://www.herdboy.com</authorUrl>
-	<version>2.5.0</version>
-	<description>Super Login module for Joomla 1.7 and Joomla 2.5 developed and maintained by the team at www.herdboy.com. Super Login was forked from the Joomla 1.5 YOOlogin module with the kind blessings of www.yootheme.com</description>
+	<version>2.5.2</version>
+	<description>Super Login module for Joomla 2.5 and Joomla 3.0 developed and maintained by the team at www.herdboy.com. Super Login was forked from the Joomla 1.5 YOOlogin module with the kind blessings of www.yootheme.com</description>
 	<files folder="site">
 		<filename module="mod_super_login">mod_super_login.php</filename>
 		<filename module="mod_super_login">mod_super_login.css.php</filename>
@@ -111,11 +111,13 @@
 		<language tag="en-GB">en-GB/en-GB.mod_super_login.sys.ini</language>
 		<language tag="es-ES">es-ES/es-ES.mod_super_login.ini</language>
 		<language tag="es-ES">es-ES/es-ES.mod_super_login.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_super_login.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_super_login.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="style" type="list" default="default" label="STYLE" description="STYLE_DESC">
+				<field name="sl_style" type="list" default="default" label="STYLE" description="STYLE_DESC">
 					<option value="default">JDefault</option>
 					<option value="quick">Quick</option>
 					<option value="niftydefault">Nifty Default</option>
@@ -126,16 +128,17 @@
 					<option value="default">JDefault</option>
 					<option value="jomsocial">JomSocial</option>
 					<option value="kunena">Kunena</option>
+					<option value="cbr">Community Builder</option>
 					<option value="sandbox">Sandbox</option>
 				</field>
 			</fieldset>
 			<fieldset name="advanced">
 				<field name="pretext" type="textarea" cols="30" rows="5" default="" label="PRE_TEXT" description="PRE_TEXT_DESC"/>
 				<field name="posttext" type="textarea" cols="30" rows="5" label="POST_TEXT" description="POST_TEXT_DESC"/>
-				<field name="login" type="menuitem" default="" disable="separator" label="LOGIN REDIRECTION" description="LOGIN_REDIRECTION_DESC">
+				<field name="login" type="menuitem" default="" disable="separator" label="LOGIN_REDIRECTION" description="LOGIN_REDIRECTION_DESC">
 					<option value="">JDEFAULT</option>
 				</field>
-				<field name="logout" type="menuitem" default="" disable="separator" label="LOGOUT REDIRECTION" description="LOGOUT_REDIRECTION_DESC">
+				<field name="logout" type="menuitem" default="" disable="separator" label="LOGOUT_REDIRECTION" description="LOGOUT_REDIRECTION_DESC">
 					<option value="">JDEFAULT</option>
 				</field>
 				<field name="greeting" type="radio" default="1" label="GREETING" description="GREETING_DESC">
@@ -169,6 +172,14 @@
 				<field name="registration" type="list" default="1" label="REG_LINK" description="REG_LINK_DESC">
 					<option value="0">JHide</option>
 					<option value="1">JShow</option>
+				</field>
+				<field name="cbreset" type="list" default="default" label="RES_LINK" description="RES_LINK_DESC">
+					<option value="default">JDefault</option>
+					<option value="cbre">Use Community Builder</option>
+				</field>
+				<field name="cbforgot" type="list" default="default" label="FOR_LINK" description="FOR_LINK_DESC">
+					<option value="default">JDefault</option>
+					<option value="cbf">Use Community Builder</option>
 				</field>
 				<field name="moduleclass_sfx" type="text" default="" label="MODULE_CLASS_SUFFIX" description="MODULE_CLASS_SUFFIX_DESC"/>
 			</fieldset>

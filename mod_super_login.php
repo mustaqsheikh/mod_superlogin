@@ -37,8 +37,10 @@ $return	= modSuperloginHelper::getReturnURL($params, $type);
 $user =& JFactory::getUser();
 
 // init vars
-$style                 = $params->get('style', 'default');
-$direct               = $params->get('direct', 'default');
+$sl_style              = $params->get('sl_style', 'default');
+$direct                = $params->get('direct', 'default');
+$cbforgot              = $params->get('cbforgot', 'default');
+$cbreset               = $params->get('cbreset', 'default');
 $pretext               = $params->get('pretext', '');
 $posttext              = $params->get('posttext', '');
 $text_mode             = $params->get('text_mode', 'input');
@@ -61,6 +63,9 @@ switch ($direct) {
 	case "kunena":
 		$reglink = ('index.php?option=com_users&view=registration');
    		break;
+	case "cbr":
+		$reglink = ('index.php?option=com_comprofiler&task=registers');
+   		break;
 	case "sandbox":
 		$reglink = ('#');
    		break;
@@ -68,7 +73,23 @@ switch ($direct) {
 		$reglink = ('index.php?option=com_users&view=registration');
 }
 
-switch ($style) {
+switch ($cbreset) {
+	case "cbre":
+		$urlink = ('index.php?option=com_comprofiler&task=lostpassword');
+   		break;
+	default:
+		$urlink = ('index.php?option=com_users&view=reset');
+}
+
+switch ($cbforgot) {
+	case "cbf":
+		$prlink = ('index.php?option=com_comprofiler&task=lostpassword');
+   		break;
+	default:
+		$prlink = ('index.php?option=com_users&view=remind');
+}
+
+switch ($sl_style) {
 	case "niftydefault":
 		require(JModuleHelper::getLayoutPath('mod_super_login', 'niftydefault'));
    		break;
